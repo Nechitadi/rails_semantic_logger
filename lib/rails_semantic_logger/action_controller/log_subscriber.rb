@@ -55,13 +55,15 @@ module RailsSemanticLogger
           # Causes excessive log output with Rails 5 RC1
           payload.delete(:headers)
           # Causes recursion in Rails 6.1.rc1
+          response = payload[:response]&.stream&.instance_variable_get(:@buf)&.first&.then { |body| JSON.parse(body) } || {}
           payload.delete(:request)
           payload.delete(:response)
 
           {
             message:  "Completed ##{payload[:action]}",
             duration: event.duration,
-            payload:  payload
+            payload:  payload,
+            response: response
           }
         end
       end
