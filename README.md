@@ -5,6 +5,22 @@ Rails Semantic Logger replaces the Rails default logger with [Semantic Logger](h
 
 * http://github.com/reidmorrison/rails_semantic_logger
 
+## Fork Details
+
+This fork of Rails Semantic Logger extends the functionality of the original gem by adding the response object to the payload returned by the `process_action` method in `lib/rails_semantic_logger/action_controller/log_subscriber.rb`. This enhancement allows users to access information about the response in their logging.
+
+### Added Features
+
+- Includes the response object in the payload returned by the `process_action` method.
+
+### Usage
+
+To use this fork in your Rails application, simply include it in your Gemfile:
+
+```ruby
+gem 'rails_semantic_logger', git: 'https://github.com/Nechitadi/rails_semantic_logger.git'
+```
+
 ## Documentation
 
 For complete documentation see: https://logger.rocketjob.io/rails
@@ -32,3 +48,4 @@ For the complete list of supported Ruby and Rails versions, see the [Testing fil
 ## Versioning
 
 This project uses [Semantic Versioning](http://semver.org/).
+
