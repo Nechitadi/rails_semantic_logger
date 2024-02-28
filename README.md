@@ -18,7 +18,7 @@ This fork of Rails Semantic Logger extends the functionality of the original gem
 To use this fork in your Rails application, simply include it in your Gemfile:
 
 ```ruby
-gem 'rails_semantic_logger', git: 'https://github.com/Nechitadi/rails_semantic_logger.git'
+gem 'rails_semantic_logger', git: 'https://github.com/firstpromoter/rails_semantic_logger.git'
 ```
 
 ## Documentation
